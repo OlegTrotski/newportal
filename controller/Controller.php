@@ -3,7 +3,7 @@
 class Controller {
 
 	public static function StartSite() {
-		$arr = New::getLast10News();
+		$arr = News::getLast10News();
 		include_once 'view/start.php';
 	}
 
@@ -13,16 +13,16 @@ class Controller {
 	}
 
 		public static function AllNews() {
-		$arr = Category::getAllNews();
+		$arr = News::getAllNews();
 		include_once 'view/allnews.php';
 	}
 
 		public static function NewsByCatID($id) {
-		$arr = Category::getNewsByCategoryID($id);
+		$arr = News::getNewsByCategoryID($id);
 		include_once 'view/catnews.php';
 	}
 		public static function NewsByID($id) {
-		$arr = Category::getNewsByID($id);
+		$arr = News::getNewsByID($id);
 		include_once 'view/readnews.php';
 	}
 
@@ -37,17 +37,17 @@ class Controller {
 	}
 
 	public static function Comments($newsid) {
-		$arr = Comments::getCommntByNewsID($newsid);
+		$arr = Comments::getCommentByNewsID($newsid);
 		ViewComments::CommentByNews($arr);
 	}
 
 	public static function CommentsCount($newsid) {
-	$arr = Comments::getCommntsCountByNewsID($newsid);
+		$arr = Comments::getCommentsCountByNewsID($newsid);
 	ViewComments::CommentsCount($arr);
 	}
 
 	public static function CommentsCountWithAncor($newsid) {
-	$arr = Comments::getCommentsCountByNewsID($newsid);
+		$arr = Comments::getCommentsCountByNewsID($newsid);
 	ViewComments::CommentsCountWithAncor($arr);
 	}
 
@@ -56,9 +56,9 @@ class Controller {
 		include_once('view/formRegister.php');
 	}
 
-	public function registerUser
+	public function registerUser()
 	{
-		$result = Registre::registerUser();
+		$result = Register::registerUser();
 
 		include_once('view/answerRegister.php');
 	}

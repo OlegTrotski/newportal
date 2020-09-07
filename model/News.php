@@ -16,7 +16,7 @@ class News{
 	public static function getNewsByCategoryID($id) {
 	$query = "SELECT * FROM news where category_id=".(string)$id." ORDER BY id DESC";
 	$db = new Database();
-	$arr = $db->getAll($query);+
+	$arr = $db->getAll($query);
 	return $arr;
 	}
 	public static function getNewsByID($id) {

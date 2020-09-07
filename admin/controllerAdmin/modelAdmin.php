@@ -40,7 +40,7 @@ class modelAdmin{
 		unset($_SESSION['name']);
 		unset($_SESSION['status']);
 		session_destroy();
-		return;
-	}
+				return;
+			}
 }
 ?>

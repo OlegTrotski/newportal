@@ -7,3 +7,4 @@ class Category{
 	$arr = $db->getAll($query);
 	return $arr;
 }
+}
