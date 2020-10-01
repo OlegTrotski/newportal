@@ -14,5 +14,5 @@ echo "<br>";
 ViewComments::CommentsForm();
 
 $content = ob_get_clean();
-inlcude_once 'view/layout.php';
+include_once 'view/layout.php';
 ?>
