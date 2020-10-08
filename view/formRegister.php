@@ -14,12 +14,12 @@
 					<div class="panel-heading"><h3>Register</h3></div>
 					<div class="panel-body">
 						<form action="registerAnswer" method="POST" role="form" class="form-horizontal">
+							<div class="form-group">
 							<label for="name" class="col-md-4 control-label">Name</label>
 							<div class="col-md-6">
 								<input id="name" type="text" class="form-control" name="name" value="" required autofocus>
 							</div>
 					</div>
-				</div>
 				<div class="form-group">
 					<label for="email" class="col-md-4 control-label">Email Address</label>
 					<div class="col-md-6">
@@ -33,7 +33,7 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<label for="password-confirm" class="col-md-6-4 control-label">Confirm Password</label>
+					<label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
 					<div class="col-md-6">
 						<input type="password" id="password-confirm" class="form-control" name="confirm" required>
 					</div>

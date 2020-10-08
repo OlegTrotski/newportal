@@ -1,8 +1,7 @@
 <?php
-if (isset($_SESSION['userId'])) {
+if (iasset($_SESSION['userId'])) {
 	header('Location: login');
 }
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,7 +16,7 @@ if (isset($_SESSION['userId'])) {
 	<div class="container">
 		<form action="login" class="form-signin" method="POST">
 			<h3 class="form-signin-heading">Введите ваши данные</h3>
-			<input type="text" name="email" class="form-control" placeholder="Email" autofocus>
+			<input type="text" name="email" class="form-control" placeholder="email" autofocus>
 			<input type="password" name="password" class="form-control" placeholder="Пароль">
 			<button class="btn btn-lg btn-primary btn-block" type="submit" name="btnLogin">Войти</button>
 
@@ -25,11 +24,11 @@ if (isset($_SESSION['userId'])) {
 				<?php
 				if (isset($_SESSION['errorString'])) {
 					echo $_SESSION['errorString'];
-					unset($_SESSION['errorString']);
+					unset($_SESSION['errorStirng']);
 				}
 				?>
 			</p>
-			<p style="padding-top: 10px;"><a href="../">Web Site</a></p>
+			<p style="padding-top:10px;"><a href="../">Web Site</a></p>
 		</form>
 	</div>
 </body>
